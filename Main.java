@@ -77,6 +77,8 @@ public class Main {
         // for that we use collection classes
         Arrays.sort(numbers2); // sorting array
         System.out.println(Arrays.toString(numbers2));
+        // string array
+        // String[] fruits = { "Apple", "Mango" };
 
         // Multi-dimensional arrays
         System.out.println("\nMulti dimensional arrays -");
@@ -203,5 +205,80 @@ public class Main {
 
         // if statements
         System.out.println("\nIf statements -");
+        // if () {
+
+        // } else if () {
+
+        // } else {
+
+        // }
+
+        // we can improve code avoiding unnecessary if like
+        // instead of this -
+        boolean isAdult1 = false;
+        if (age > 18) {
+            isAdult1 = true;
+        }
+        // simply do this -
+        boolean isAdult2 = age > 18;
+
+        // ternary operator
+        System.out.println("\nTernary operator -");
+        String userCategory = age > 18 ? "Adult" : "Not an adult";
+
+        // switch statements
+        System.out.println("\nSwitch statements -");
+        // switch (key) {
+        // case value:
+        // break;
+
+        // default:
+        // break;
+        // }
+
+        // here, data type of key and value have to be same
+
+        // for loop
+        System.out.println("\nFor loop -");
+        for (int i = 0; i < 5; i++) {
+            int j = i + 1;
+            System.out.println("For loop line " + j);
+        }
+
+        // while loop - useful when we don't know the number of times loop should be
+        // executed unlike in for where we know the number, hence we use counter
+        System.out.println("\nWhile loop -");
+        String input = "Quit";
+        // we can't use != operator for reference types, this compares the address
+        // while (input != "Quit") // incorrect
+        while (!input.equals("Quit")) { // we need to use this method
+            // code
+        }
+
+        // do while loop
+        System.out.println("\nDo while loop -");
+        // do {
+
+        // } while (condition); // semicolon at the end
+
+        // break and continue
+        System.out.println("\nBreak and Continue -");
+        while (true) { // need no condition as we use break with same condition
+            // code
+            if (input.equals("Skip this input")) {
+                continue;
+            } else if (input.equals("Quit")) {
+                break;
+            }
+
+            System.out.println(input);
+        }
+
+        // for each loop
+        System.out.println("\nFor each loop -");
+        String[] fruits = { "Apple", "Mango", "Orange" };
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
     }
 }
