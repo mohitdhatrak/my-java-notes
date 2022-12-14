@@ -7,15 +7,23 @@ import java.text.NumberFormat;
 public class Main {
     public static void main(String args[]) {
         // primitive data types
-        byte age = 127;
-        short num1 = 222;
-        int num2 = 156_234; // we can use _ to make big numbers readable, like we use commas on paper
+        byte age = 127; // 1 byte, range -128 to 127
+        short num1 = 222; // 2 bytes, range -32K to 32K
+        // we can use _ to make big numbers readable, like we use commas on paper
+        int num2 = 156_234; // 4 bytes, range -2B to 2B roughly (B - billion)
         // long num3 = 23_123_456_789; // error assumes that number is int only, use L
-        long num3 = 23_123_456_789L;
-        double price1 = 10.99;
-        float price2 = 10.99F;
-        char a = 'A';
-        boolean b = true;
+        long num3 = 23_123_456_789L; // 8 bytes
+        double price1 = 10.99; // 8 bytes
+        // float price2 = 10.99; // error assumes that number is double only, use F
+        float price2 = 10.99F; // 4 bytes
+
+        boolean b = true; // 1 byte
+        char a = 'A'; // 2 bytes
+        // Java supports more than 18 international languages so java takes 2 bytes for
+        // characters, as 1 byte of memory is not sufficient for storing all characters
+        // and symbols present in 18 languages.
+        // Java supports Unicode (Unicode based), C is ASCII code based so only 256
+        // char, hence 1 byte for char in C
 
         System.out.println("\nPrimitive data types -");
         System.out.println(age);
