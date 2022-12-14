@@ -186,19 +186,5 @@ public class Main {
         String name1 = sc.nextLine().trim(); // takes whole line
         // as sc.nextLine() returns a string we can chain method .trim()
         System.out.println("Your name is: " + name1);
-
-        // CONTROL FLOW
-
-        // comparison operators
-        System.out.println("\nComparison operators -");
-        System.out.println(1 == 1); // true
-        System.out.println(1 != 1); // false
-        // more operators: >, <, >=, <=
-
-        // logical operators
-        System.out.println("\nLogical operators -");
-        // AND: &&
-        // OR: ||
-        // NOT: !
     }
 }
